@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "402197020448",
+    "firebase_url": "https://freshfind-12680-default-rtdb.firebaseio.com",
+    "project_id": "freshfind-12680",
+    "storage_bucket": "freshfind-12680.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402197020448:android:b9e54ec1fafc561073a145",
+        "android_client_info": {
+          "package_name": "com.example.freshfind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402197020448-f3122ndj8tlnihsk63mnniugb7hd0lpm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrctv9qWwUXesTzU7uzCQKc14Ie4-kALY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402197020448-f3122ndj8tlnihsk63mnniugb7hd0lpm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
