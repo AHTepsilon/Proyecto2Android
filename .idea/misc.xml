@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Program Files (x86)/Android Studio/FreshFind/app/src/main/res/layout/activity_instruction_screen1.xml" value="0.17" />
+        <entry key="..\:/Program Files (x86)/Android Studio/FreshFind/app/src/main/res/layout/activity_instruction_screen2.xml" value="0.2" />
+        <entry key="..\:/Program Files (x86)/Android Studio/FreshFind/app/src/main/res/layout/activity_instruction_screen3.xml" value="0.13" />
+        <entry key="..\:/Program Files (x86)/Android Studio/FreshFind/app/src/main/res/layout/activity_instruction_screen4.xml" value="0.22" />
+        <entry key="..\:/Program Files (x86)/Android Studio/FreshFind/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Program Files (x86)/Android Studio/FreshFind/app/src/main/res/layout/activity_sign_up_or_login_screen.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

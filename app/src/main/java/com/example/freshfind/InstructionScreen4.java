@@ -4,29 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class InstructionScreen4 extends AppCompatActivity {
 
-    Button overlay;
+    Button goButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_instruction_screen4);
 
-        overlay = findViewById(R.id.firstScreenInteracts);
+        goButton = findViewById(R.id.initiateButton);
 
-        overlay.setOnClickListener((view) ->
+        goButton.setOnClickListener((view)->
         {
             switchScreen();
         });
     }
+
     public void switchScreen()
     {
-        Intent pass = new Intent(this, InstructionScreen1.class);
-        startActivity(pass);
+        Intent intent = new Intent(this, sign_up_or_login_screen.class);
+        startActivity(intent);
     }
 }

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/screen1"
-    tools:context=".MainActivity">
+    android:background="@drawable/ins_screen2"
+    tools:context=".InstructionScreen2">
 
     <Button
-        android:id="@+id/firstScreenInteracts"
-        android:layout_width="413dp"
-        android:layout_height="730dp"
+        android:id="@+id/thirdScreenInteracts"
+        android:layout_width="415dp"
+        android:layout_height="737dp"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

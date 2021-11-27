@@ -4,29 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class InstructionScreen1 extends AppCompatActivity {
 
-    Button overlay;
+    Button overlay2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_instruction_screen1);
 
-        overlay = findViewById(R.id.firstScreenInteracts);
+        overlay2 = findViewById(R.id.secondScreenInteracts);
 
-        overlay.setOnClickListener((view) ->
+        overlay2.setOnClickListener((view) ->
         {
             switchScreen();
         });
     }
     public void switchScreen()
     {
-        Intent pass = new Intent(this, InstructionScreen1.class);
+        Intent pass = new Intent(this, InstructionScreen2.class);
         startActivity(pass);
     }
 }

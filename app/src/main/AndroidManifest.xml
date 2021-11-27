@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshFind">
         <activity
+            android:name=".sign_up_or_login_screen"
+            android:exported="true" />
+        <activity
+            android:name=".InstructionScreen4"
+            android:exported="true" />
+        <activity
+            android:name=".InstructionScreen3"
+            android:exported="true" />
+        <activity
+            android:name=".InstructionScreen2"
+            android:exported="true" />
+        <activity
+            android:name=".InstructionScreen1"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

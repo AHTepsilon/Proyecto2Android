@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_up_or_login_screen"
+    tools:context=".sign_up_or_login_screen"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="151dp"
+        android:layout_height="54dp"
+        android:background="#9DD01A"
+        android:text="Login"
+        app:backgroundTint="#9DD01A"
+        app:cornerRadius="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <Button
+        android:id="@+id/signUpWithGoogle"
+        android:layout_width="306dp"
+        android:layout_height="39dp"
+        android:background="#009DD01A"
+        app:backgroundTint="#009DD01A"
+        app:cornerRadius="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <Button
+        android:id="@+id/signUpWithFacebook"
+        android:layout_width="306dp"
+        android:layout_height="39dp"
+        android:background="#009DD01A"
+        app:backgroundTint="#009DD01A"
+        app:cornerRadius="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <Button
+        android:id="@+id/signUpWithOutlook"
+        android:layout_width="306dp"
+        android:layout_height="39dp"
+        android:background="#009DD01A"
+        app:backgroundTint="#009DD01A"
+        app:cornerRadius="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="151dp"
+        android:layout_height="54dp"
+        android:background="#9DD01A"
+        android:text="Sign Up"
+        app:backgroundTint="#9DD01A"
+        app:cornerRadius="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.796"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+</androidx.constraintlayout.widget.ConstraintLayout>

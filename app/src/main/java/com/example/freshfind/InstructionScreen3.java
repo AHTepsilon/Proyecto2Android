@@ -4,20 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class InstructionScreen3 extends AppCompatActivity {
 
     Button overlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_instruction_screen3);
 
-        overlay = findViewById(R.id.firstScreenInteracts);
+        overlay = findViewById(R.id.fourthScreenInteracts);
 
         overlay.setOnClickListener((view) ->
         {
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void switchScreen()
     {
-        Intent pass = new Intent(this, InstructionScreen1.class);
+        Intent pass = new Intent(this, InstructionScreen4.class);
         startActivity(pass);
     }
 }

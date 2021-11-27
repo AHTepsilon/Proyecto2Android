@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/screen1"
-    tools:context=".MainActivity">
+    android:background="@drawable/ins_screen4"
+    tools:context=".InstructionScreen4">
 
     <Button
-        android:id="@+id/firstScreenInteracts"
-        android:layout_width="413dp"
-        android:layout_height="730dp"
-        android:background="#00FFFFFF"
+        android:id="@+id/initiateButton"
+        android:layout_width="162dp"
+        android:layout_height="47dp"
+        android:text="Go"
+        android:background="#FF7A00"
+        app:backgroundTint="#FF7A00"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.744" />
 </androidx.constraintlayout.widget.ConstraintLayout>
