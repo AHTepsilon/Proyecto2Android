@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshFind">
         <activity
+            android:name=".MarketHouseScreen_FruitsSelected"
+            android:exported="true" />
+        <activity
+            android:name=".MarketHouseScreen"
+            android:exported="true" />
+        <activity
             android:name=".landingScreen"
             android:exported="true" />
         <activity
