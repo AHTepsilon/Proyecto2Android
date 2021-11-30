@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshFind">
         <activity
+            android:name=".landingScreen"
+            android:exported="true" />
+        <activity
             android:name=".loginScreen"
             android:exported="true" />
         <activity

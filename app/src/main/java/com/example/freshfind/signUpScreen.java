@@ -3,6 +3,7 @@ package com.example.freshfind;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -66,6 +67,8 @@ public class signUpScreen extends AppCompatActivity {
                                 {
                                     if(taskdb.isSuccessful())
                                     {
+                                        switchScreen();
+
                                         Toast.makeText(this, "Succesfully signed up!", Toast.LENGTH_LONG).show();
                                     }
                                 }
@@ -78,5 +81,11 @@ public class signUpScreen extends AppCompatActivity {
                    }
                }
        );
+    }
+
+    public void switchScreen()
+    {
+        Intent intent = new Intent(this, landingScreen.class);
+        startActivity(intent);
     }
 }
