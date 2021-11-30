@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshFind">
         <activity
+            android:name=".loginScreen"
+            android:exported="true" />
+        <activity
+            android:name=".signUpScreen"
+            android:exported="true" />
+        <activity
             android:name=".sign_up_or_login_screen"
             android:exported="true" />
         <activity
