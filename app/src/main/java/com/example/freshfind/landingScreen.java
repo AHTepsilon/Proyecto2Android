@@ -37,6 +37,7 @@ public class landingScreen extends AppCompatActivity {
 
     public void goToScanner()
     {
-
+        Intent i = new Intent(this, newScannerScreen.class);
+        startActivity(i);
     }
 }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshFind">
         <activity
+            android:name=".newScannerScreen"
+            android:exported="true" />
+        <activity
             android:name=".MarketHouseScreen_FruitsSelected"
             android:exported="true" />
         <activity
