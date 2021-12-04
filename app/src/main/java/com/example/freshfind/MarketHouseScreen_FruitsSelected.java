@@ -75,8 +75,8 @@ public class MarketHouseScreen_FruitsSelected extends AppCompatActivity {
                         for(DataSnapshot child : data.getChildren())
                         {
                             FoodCards fc = child.getValue(FoodCards.class);
-                            foodT.append(fc.getNAME() + "\n" + fc.getQUANTITY() + " " + fc.getWEIGHT()
-                            + "\n" + fc.getBOUGHT() + " " + fc.getEXPIRES() + "\n" + "\n");
+                            foodT.append(fc.getNAME() + "\n" + "amount: " + fc.getQUANTITY() + "\n" + fc.getWEIGHT() + " kg"
+                            + "\n" + "days since since bought: " + fc.getBOUGHT() + "\n" + "expires in: " + fc.getEXPIRES() + " days" + "\n" + "\n");
                         }
                     }
 
