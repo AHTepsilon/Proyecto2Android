@@ -65,4 +65,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/market_house_nuts_selected_screen" />
 
+    <TextView
+        android:id="@+id/foodTV3"
+        android:layout_width="338dp"
+        android:layout_height="388dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

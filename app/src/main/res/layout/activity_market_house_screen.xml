@@ -65,4 +65,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/market_house_clean_screen" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

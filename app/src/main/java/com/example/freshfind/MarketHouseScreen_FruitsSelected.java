@@ -56,30 +56,36 @@ public class MarketHouseScreen_FruitsSelected extends AppCompatActivity {
         });
 
         getFruits();
+        loadDatabase();
     }
 
     public void getFruits()
     {
+
+    }
+
+    private void loadDatabase()
+    {
         DatabaseReference dbRef = db.getReference("foodAtHome").child("fruits");
-        dbRef.addValueEventListener(new ValueEventListener()
-        {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot)
-            {
-                for(DataSnapshot ds : snapshot.getChildren())
-                {
-                    FoodCards fc = ds.getValue(FoodCards.class);
-                    foodT.append(fc.getName() + "\n" + fc.getBought() + ", " + fc.getExpires()
-                    + "\n" + fc.getQuantity() + ", " + fc.getWeight());
+        dbRef.addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot data) {
+                        foodT.setText("");
+                        for(DataSnapshot child : data.getChildren())
+                        {
+                            FoodCards fc = child.getValue(FoodCards.class);
+                            foodT.append(fc.getNAME() + "\n" + fc.getQUANTITY() + " " + fc.getWEIGHT()
+                            + "\n" + fc.getBOUGHT() + " " + fc.getEXPIRES() + "\n" + "\n");
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
                 }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error)
-            {
-
-            }
-        });
+        );
     }
 
     public void goHome()

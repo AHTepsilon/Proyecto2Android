@@ -1,15 +1,27 @@
 package com.example.freshfind;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MarketHouseScreen_NutsSelected extends AppCompatActivity {
 
     Button homeBtn3, fruitBtn3, vegBtn3, nutButt3;
 
+    TextView foodT;
+
+    FirebaseDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +31,10 @@ public class MarketHouseScreen_NutsSelected extends AppCompatActivity {
         fruitBtn3 = findViewById(R.id.fruitButton4);
         vegBtn3 = findViewById(R.id.vegetableButton4);
         nutButt3 = findViewById(R.id.nutsButton4);
+
+        foodT = findViewById(R.id.foodTV3);
+
+        db = FirebaseDatabase.getInstance();
 
         homeBtn3.setOnClickListener((view)->
         {
@@ -39,6 +55,37 @@ public class MarketHouseScreen_NutsSelected extends AppCompatActivity {
         {
             goToNutsSection();
         });
+
+        loadDatabase();
+    }
+
+    public void loadDatabase()
+    {
+        DatabaseReference dbRef = db.getReference("foodAtHome").child("nuts");
+        dbRef.addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot data)
+                    {
+                        foodT.setText("");
+
+                        for(DataSnapshot child : data.getChildren())
+                        {
+                            FoodCards fc = child.getValue(FoodCards.class);
+                            foodT.append(fc.getNAME() + "\n" + fc.getQUANTITY() + " " + fc.getWEIGHT()
+                                    + "\n" + fc.getBOUGHT() + " " + fc.getEXPIRES());
+
+                            Log.d("<<", fc.getNAME());
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error)
+                    {
+
+                    }
+                }
+        );
     }
 
     public void goHome()

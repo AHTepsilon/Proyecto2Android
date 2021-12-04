@@ -2,59 +2,59 @@ package com.example.freshfind;
 
 public class FoodCards
 {
-    private String name;
-    private int quantity, weight, bought, expires;
+    private String NAME;
+    private int QUANTITY, WEIGHT, BOUGHT, EXPIRES;
 
     public FoodCards()
     {
 
     }
 
-    public FoodCards(String name, int quantity, int weight, int bought, int expires) {
-        this.name = name;
-        this.quantity = quantity;
-        this.weight = weight;
-        this.bought = bought;
-        this.expires = expires;
+    public FoodCards(String NAME, int QUANTITY, int WEIGHT, int BOUGHT, int EXPIRES) {
+        this.NAME = NAME;
+        this.QUANTITY = QUANTITY;
+        this.WEIGHT = WEIGHT;
+        this.BOUGHT = BOUGHT;
+        this.EXPIRES = EXPIRES;
     }
 
-    public String getName() {
-        return name;
+    public String getNAME() {
+        return NAME;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNAME(String NAME) {
+        this.NAME = NAME;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQUANTITY() {
+        return QUANTITY;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQUANTITY(int QUANTITY) {
+        this.QUANTITY = QUANTITY;
     }
 
-    public int getWeight() {
-        return weight;
+    public int getWEIGHT() {
+        return WEIGHT;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setWEIGHT(int WEIGHT) {
+        this.WEIGHT = WEIGHT;
     }
 
-    public int getBought() {
-        return bought;
+    public int getBOUGHT() {
+        return BOUGHT;
     }
 
-    public void setBought(int bought) {
-        this.bought = bought;
+    public void setBOUGHT(int BOUGHT) {
+        this.BOUGHT = BOUGHT;
     }
 
-    public int getExpires() {
-        return expires;
+    public int getEXPIRES() {
+        return EXPIRES;
     }
 
-    public void setExpires(int expires) {
-        this.expires = expires;
+    public void setEXPIRES(int EXPIRES) {
+        this.EXPIRES = EXPIRES;
     }
 }
