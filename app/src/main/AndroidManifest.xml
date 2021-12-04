@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshFind">
         <activity
+            android:name=".addFoodNuts"
+            android:exported="true" />
+        <activity
+            android:name=".addFoodVegs"
+            android:exported="true" />
+        <activity
+            android:name=".addFoodFruits"
+            android:exported="true" />
+        <activity
             android:name=".MarketHouseScreen_NutsSelected"
             android:exported="true" />
         <activity

@@ -64,7 +64,7 @@ public class landingScreen extends AppCompatActivity {
 
     public void goToAddItem()
     {
-        Intent i = new Intent(this, newScannerScreen.class);
+        Intent i = new Intent(this, addFoodFruits.class);
         startActivity(i);
     }
 
