@@ -6,36 +6,36 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class MarketHouseScreen extends AppCompatActivity {
+public class MarketHouseScreen_NutsSelected extends AppCompatActivity {
 
-    Button homeBtn, fruitBtn, vegBtn, nutButt;
+    Button homeBtn3, fruitBtn3, vegBtn3, nutButt3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_market_house_screen);
+        setContentView(R.layout.activity_market_house_screen_nuts_selected);
+        homeBtn3 = findViewById(R.id.homeButton4);
+        fruitBtn3 = findViewById(R.id.fruitButton4);
+        vegBtn3 = findViewById(R.id.vegetableButton4);
+        nutButt3 = findViewById(R.id.nutsButton4);
 
-        homeBtn = findViewById(R.id.homeButton);
-        fruitBtn = findViewById(R.id.fruitButton);
-        vegBtn = findViewById(R.id.vegetableButton);
-        nutButt = findViewById(R.id.nutsButton);
-
-        homeBtn.setOnClickListener((view)->
+        homeBtn3.setOnClickListener((view)->
         {
             goHome();
         });
 
-        fruitBtn.setOnClickListener((view)->
+        fruitBtn3.setOnClickListener((view)->
         {
             goToFruitsSection();
         });
 
-        vegBtn.setOnClickListener((view)->
+        vegBtn3.setOnClickListener((view)->
         {
             goToVegsSection();
         });
 
-        nutButt.setOnClickListener((view)->
+        nutButt3.setOnClickListener((view)->
         {
             goToNutsSection();
         });

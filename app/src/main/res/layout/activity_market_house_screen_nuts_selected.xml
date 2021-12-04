@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MarketHouseScreen_FruitsSelected">
+    tools:context=".MarketHouseScreen_NutsSelected">
 
     <Button
-        android:id="@+id/fruitButton2"
+        android:id="@+id/fruitButton4"
         android:layout_width="58dp"
         android:layout_height="42dp"
         android:background="#00FFFFFF"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.224" />
 
     <Button
-        android:id="@+id/vegetableButton2"
+        android:id="@+id/vegetableButton4"
         android:layout_width="105dp"
         android:layout_height="43dp"
         android:background="#00FFFFFF"
@@ -31,7 +31,7 @@
         app:layout_constraintVertical_bias="0.226" />
 
     <Button
-        android:id="@+id/nutsButton2"
+        android:id="@+id/nutsButton4"
         android:layout_width="72dp"
         android:layout_height="43dp"
         android:background="#00FFFFFF"
@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.225" />
 
     <Button
-        android:id="@+id/homeButton2"
+        android:id="@+id/homeButton4"
         android:layout_width="98dp"
         android:layout_height="71dp"
         android:background="#00FFFFFF"
@@ -55,23 +55,14 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/market_house_fruits_selected_screen" />
-
-    <TextView
-        android:id="@+id/foodTV"
-        android:layout_width="338dp"
-        android:layout_height="388dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:srcCompat="@drawable/market_house_nuts_selected_screen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

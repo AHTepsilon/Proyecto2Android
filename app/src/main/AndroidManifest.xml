@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FreshFind">
         <activity
+            android:name=".MarketHouseScreen_NutsSelected"
+            android:exported="true" />
+        <activity
+            android:name=".MarketHouseScreen_VegsSelected"
+            android:exported="true" />
+        <activity
             android:name=".newScannerScreen"
             android:exported="true" />
         <activity
