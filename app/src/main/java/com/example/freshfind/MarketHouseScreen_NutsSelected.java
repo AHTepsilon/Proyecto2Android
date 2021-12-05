@@ -72,10 +72,8 @@ public class MarketHouseScreen_NutsSelected extends AppCompatActivity {
                         for(DataSnapshot child : data.getChildren())
                         {
                             FoodCards fc = child.getValue(FoodCards.class);
-                            foodT.append(fc.getNAME() + "\n" + "amount: " + fc.getQUANTITY() + "\n" + fc.getWEIGHT() + " kg"
-                                    + "\n" + "days since since bought: " + fc.getBOUGHT() + "\n" + "expires in: " + fc.getEXPIRES() + " days" + "\n" + "\n");
-
-                            Log.d("<<", fc.getNAME());
+                            foodT.append(fc.getName() + "\n" + "amount: " + fc.getQuantity() + "\n" + fc.getWeight() + " kg"
+                                    + "\n" + "days since since bought: " + fc.getBought() + "\n" + "expires in: " + fc.getExpires() + " days" + "\n" + "\n");
                         }
                     }
 

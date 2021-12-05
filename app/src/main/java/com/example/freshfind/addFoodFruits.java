@@ -1,5 +1,6 @@
 package com.example.freshfind;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,11 +8,21 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Locale;
+
 public class addFoodFruits extends AppCompatActivity {
 
     Button fruitAddBtn, vegAddBtn, nutsAddBtn, goHomeBtn, sendItemBtn;
 
     EditText nameT, quantityT, weightT, boughtT;
+
+    private FirebaseDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +40,8 @@ public class addFoodFruits extends AppCompatActivity {
         weightT = findViewById(R.id.weightEditText);
         boughtT = findViewById(R.id.nameBoughtText);
 
+        db = FirebaseDatabase.getInstance();
+
         vegAddBtn.setOnClickListener((view)->
         {
             switchToVeg();
@@ -43,6 +56,49 @@ public class addFoodFruits extends AppCompatActivity {
         {
             goHome();
         });
+
+        sendItemBtn.setOnClickListener((view) ->
+        {
+            uploadFruit();
+        });
+    }
+
+    public void uploadFruit()
+    {
+        DatabaseReference dbRef = db.getReference("foodAtHome").child("fruits").child(nameT.getText().toString().toLowerCase(Locale.ROOT));
+
+        String foodName = nameT.getText().toString();
+        int foodAmount = Integer.parseInt(quantityT.getText().toString());
+        int foodWeight = Integer.parseInt(weightT.getText().toString());
+        int foodBought = Integer.parseInt(boughtT.getText().toString());
+        int foodExpires = (int) (foodBought + (-5 + Math.random() * 40));
+
+        FoodCards foodItem = new FoodCards(foodName, foodAmount, foodWeight, foodBought, foodExpires);
+
+        dbRef.setValue(foodItem);
+
+        goHome();
+    }
+
+    private void loadDatabase()
+    {
+        DatabaseReference dbRef = db.getReference("foodAtHome").child("fruits");
+        dbRef.addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot data) {
+                        for(DataSnapshot child : data.getChildren())
+                        {
+                            FoodCards fc = child.getValue(FoodCards.class);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                }
+        );
     }
 
     public void switchToVeg()
