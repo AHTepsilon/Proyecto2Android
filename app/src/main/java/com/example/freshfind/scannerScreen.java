@@ -10,6 +10,13 @@ public class scannerScreen extends AppCompatActivity {
 
     Button goBackBtn;
 
+    int randomNumType;
+    int randomFood;
+
+    String[] fruitsArr;
+    String[] vegsArr;
+    String[] nutsArr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +32,7 @@ public class scannerScreen extends AppCompatActivity {
 
     public void goBack()
     {
-        Intent intent = new Intent(this, landingScreen.class);
+        Intent intent = new Intent(this, finishedScanning.class);
         startActivity(intent);
     }
 }
