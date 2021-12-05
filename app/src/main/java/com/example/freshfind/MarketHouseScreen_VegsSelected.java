@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
@@ -36,6 +37,8 @@ public class MarketHouseScreen_VegsSelected extends AppCompatActivity {
         foodT2 = findViewById(R.id.foodTV2);
 
         db = FirebaseDatabase.getInstance();
+
+        foodT2.setMovementMethod(new ScrollingMovementMethod());
 
         homeBtn2.setOnClickListener((view)->
         {

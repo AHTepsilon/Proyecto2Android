@@ -80,27 +80,6 @@ public class addFoodFruits extends AppCompatActivity {
         goHome();
     }
 
-    private void loadDatabase()
-    {
-        DatabaseReference dbRef = db.getReference("foodAtHome").child("fruits");
-        dbRef.addListenerForSingleValueEvent(
-                new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot data) {
-                        for(DataSnapshot child : data.getChildren())
-                        {
-                            FoodCards fc = child.getValue(FoodCards.class);
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                }
-        );
-    }
-
     public void switchToVeg()
     {
         Intent intent = new Intent(this, addFoodVegs.class);

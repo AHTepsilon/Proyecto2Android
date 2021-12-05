@@ -7,11 +7,18 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Locale;
+
 public class addFoodVegs extends AppCompatActivity {
 
     Button fruitAddBtn, vegAddBtn, nutsAddBtn, goHomeBtn, sendItemBtn;
 
     EditText nameT, quantityT, weightT, boughtT;
+
+    FirebaseDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,8 @@ public class addFoodVegs extends AppCompatActivity {
         weightT = findViewById(R.id.weightEditText3);
         boughtT = findViewById(R.id.nameBoughtText3);
 
+        db = FirebaseDatabase.getInstance();
+
         fruitAddBtn.setOnClickListener((view)->
         {
             switchToFruits();
@@ -43,6 +52,28 @@ public class addFoodVegs extends AppCompatActivity {
         {
             goHome();
         });
+
+        sendItemBtn.setOnClickListener((view)->
+        {
+            uploadFruit();
+        });
+    }
+
+    public void uploadFruit()
+    {
+        DatabaseReference dbRef = db.getReference("foodAtHome").child("vegetables").child(nameT.getText().toString().toLowerCase(Locale.ROOT));
+
+        String foodName = nameT.getText().toString();
+        int foodAmount = Integer.parseInt(quantityT.getText().toString());
+        int foodWeight = Integer.parseInt(weightT.getText().toString());
+        int foodBought = Integer.parseInt(boughtT.getText().toString());
+        int foodExpires = (int) (foodBought + (-5 + Math.random() * 40));
+
+        FoodCards foodItem = new FoodCards(foodName, foodAmount, foodWeight, foodBought, foodExpires);
+
+        dbRef.setValue(foodItem);
+
+        goHome();
     }
 
     public void switchToFruits()
