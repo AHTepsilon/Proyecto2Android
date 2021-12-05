@@ -90,7 +90,7 @@ public class addFoodVegs extends AppCompatActivity {
 
     public void goHome()
     {
-        Intent intent = new Intent(this, landingScreen.class);
+        Intent intent = new Intent(this, finishedScanning.class);
         startActivity(intent);
     }
 }
