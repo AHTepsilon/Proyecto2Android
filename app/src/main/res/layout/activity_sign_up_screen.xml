@@ -8,15 +8,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="414dp"
-        android:layout_height="738dp"
+        android:layout_width="416dp"
+        android:layout_height="728dp"
+        android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571"
-        app:srcCompat="@drawable/sign_up_screen" />
+        app:srcCompat="@drawable/register_screen2" />
 
     <EditText
         android:id="@+id/nameTextField"
@@ -79,7 +78,8 @@
         app:cornerRadius="325dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77" />
+        app:layout_constraintVertical_bias="0.764" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
